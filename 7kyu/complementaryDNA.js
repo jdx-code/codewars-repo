@@ -12,7 +12,11 @@
 // "GTAT" --> "CATA"
 
 function DNAStrand(dna){    
-    let chars = {'A':'T', 'T':'A', 'C':'G', 'G':'C'};    
-    return dna.replace(/[TACG]/g, m => chars[m]);    
+    // Method #1
+    // let chars = {'A':'T', 'T':'A', 'C':'G', 'G':'C'};    
+    // return dna.replace(/[TACG]/g, m => chars[m]);    
+
+    //Method #2
+    return dna.replace(/[TACG]/g, m => { return {'A':'T', 'T':'A', 'C':'G', 'G':'C'}[m]; });
 }
 console.log(DNAStrand('AATT'));
