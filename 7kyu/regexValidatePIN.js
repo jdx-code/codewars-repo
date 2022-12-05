@@ -7,11 +7,12 @@
 
 function validatePIN(pin){
     // Method #1 : Using a pattern enclosed between / and /
+    // const pattern = /^([0-9]{4}|[0-9]{6})$/;
+    // return pattern.test(pin);
 
-    const pattern = /^([0-9]{4}|[0-9]{6})$/;
-    return pattern.test(pin);
-
-    
+    // Method #2 : Using the constructor function of RegExp object
+    const regexp = new RegExp('^([0-9]{4}|[0-9]{6})$');
+    return regexp.test(pin);    
 }
 
-console.log(validatePIN("1234"));
+console.log(validatePIN("123456"));
