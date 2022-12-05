@@ -1,5 +1,8 @@
 function removeChar(str){   
 
+    // Using substr function
+    return str.substr(1,str.length-2);  
+    
     // Using a normal for-loop
     // let newStr = "";
     // for(let i=1; i<str.length-1; i++){
@@ -14,10 +17,7 @@ function removeChar(str){
     //         continue
     //     newStr += str[i];
     // }
-    // return newStr;
-
-    // Using substr function
-    return str.substr(1,str.length-2);       
+    // return newStr;         
 }
 
 console.log(removeChar('hello'));
