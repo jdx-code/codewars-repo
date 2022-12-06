@@ -6,14 +6,17 @@
 
 function getCount(str){    
 
+    // Using regular expression and match function 
+    return str.match(/[aeiou]/ig).length;
+
     // Using simple for-loop and if-condition
-    var count = 0;
-    for(var i=0; i<str.length; i++){
-        if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u'){
-            count += 1;
-        }
-    }
-    return count;
+    // var count = 0;
+    // for(var i=0; i<str.length; i++){
+    //     if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u'){
+    //         count += 1;
+    //     }
+    // }
+    // return count;
 }
 
-console.log(getCount("verb"))
+console.log(getCount("pizzeria"))
