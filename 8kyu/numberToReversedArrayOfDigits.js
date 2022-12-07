@@ -7,23 +7,25 @@
 // 0 => [0]
 
 function digitize(n){
-    // Using simple while loop and push function
-    var revArr = [];
-    var rem;
-    if(n===0){
-      revArr.push(n);      
-    } else {
-        while(n!=0){
-          rem = n%10;
-          revArr.push(rem);
-          n = Math.floor(n/10);
-      }
-    }
-    
-    return revArr;
+    // Using simple while loop and push function  : Method #1
+    // var revArr = [];
+    // var rem;
+    // if(n===0){
+    //   revArr.push(n);      
+    // } else {
+    //     while(n!=0){
+    //       rem = n%10;
+    //       revArr.push(rem);
+    //       n = Math.floor(n/10);
+    //   }
+    // }    
+    // return revArr;
 
-    // Using shorthand methods
-    // return n.toString().split('').reverse().join();
+    // Using shorthand methods : Method #2
+    // return n.toString().split('').reverse().map(e => parseInt(e));
+
+    // Using shorthand methods : Method #3
+    return n.toString().split('').reverse().map(Number);
 }
 
-console.log(digitize(0));
+console.log(digitize(12345));
