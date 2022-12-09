@@ -13,11 +13,15 @@
 
 function findNextSquare(sq){
     var sqNum = Math.sqrt(sq);
-    if(Number.isInteger(sqNum)){
-        return Math.pow(Math.sqrt(sq)+1, 2);
-    } else {
-        return -1;
-    }
     
+    // Using ternary conditional operator
+    return Number.isInteger(sqNum) ? Math.pow(sqNum+1, 2) : -1;
+
+    // Using if-else
+    // if(Number.isInteger(sqNum)){
+    //     return Math.pow(sqNum+1, 2);
+    // } else {
+    //     return -1;
+    // }
 }
  console.log(findNextSquare(121));
