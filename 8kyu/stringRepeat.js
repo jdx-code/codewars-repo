@@ -5,11 +5,16 @@
 // 5, "Hello" -> "HelloHelloHelloHelloHello"
 
 function stringRepeat(num, str){
-    let newStr = "";
-    for(let i = 1; i<=num; i++){
-        newStr += str;
-    }
-    return newStr;
+
+    // Method 1 : Using repeat function
+    return str.repeat(num);
+
+    // Method 2 : Using normal for-loop
+    // let newStr = "";
+    // for(let i = 1; i<=num; i++){
+    //     newStr += str;
+    // }
+    // return newStr;
 }
 
 console.log(stringRepeat(5, "Hello"))
