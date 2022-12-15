@@ -13,11 +13,15 @@ function feast(beast, dish){
     let firstLetterOfDish = dishArr[0];
     let lastLetterOfDish = dishArr[dishArr.length-1];
 
-    if(firstLetterOfBeast == firstLetterOfDish && lastLetterOfBeast == lastLetterOfDish){
-        return true;
-    } else {
-        return false;
-    }
+    // Method #1 : Using simple if-else
+    // if(firstLetterOfBeast === firstLetterOfDish && lastLetterOfBeast === lastLetterOfDish){
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+
+    // Method #2 : Using ternary operator
+    return firstLetterOfBeast === firstLetterOfDish && lastLetterOfBeast === lastLetterOfDish ? true : false;
 }
 
-console.log(feast("chickadee", "chocolate-cakes"));
+console.log(feast("chickadee", "chocolate-cake"));
