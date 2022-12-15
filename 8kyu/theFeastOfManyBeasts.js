@@ -6,12 +6,12 @@
 
 
 function feast(beast, dish){
-    let beastArr = beast.split('');
-    let dishArr = dish.split('');
-    let firstLetterOfBeast = beastArr[0];    
-    let lastLetterOfBeast = beastArr[beastArr.length-1];
-    let firstLetterOfDish = dishArr[0];
-    let lastLetterOfDish = dishArr[dishArr.length-1];
+    // let beastArr = beast.split('');
+    // let dishArr = dish.split('');
+    // let firstLetterOfBeast = beastArr[0];    
+    // let lastLetterOfBeast = beastArr[beastArr.length-1];
+    // let firstLetterOfDish = dishArr[0];
+    // let lastLetterOfDish = dishArr[dishArr.length-1];
 
     // Method #1 : Using simple if-else
     // if(firstLetterOfBeast === firstLetterOfDish && lastLetterOfBeast === lastLetterOfDish){
@@ -21,7 +21,10 @@ function feast(beast, dish){
     // }
 
     // Method #2 : Using ternary operator
-    return firstLetterOfBeast === firstLetterOfDish && lastLetterOfBeast === lastLetterOfDish ? true : false;
+    // return firstLetterOfBeast === firstLetterOfDish && lastLetterOfBeast === lastLetterOfDish ? true : false;
+
+    // Method #3 : Using shift/pop operators
+    return beast.split('').shift() === dish.split('').shift() && beast.split('').pop() === dish.split('').pop() ? true : false;
 }
 
-console.log(feast("chickadee", "chocolate-cake"));
+console.log(feast("chickadee", "chocolate-cakes"));
