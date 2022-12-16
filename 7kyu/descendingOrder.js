@@ -5,7 +5,12 @@
 // Input: 123456789 Output: 987654321
 
 function descendingOrder(n){
-    return Number(n.toString().split('').map(Number).sort((a,b)=>b-a).join(''));
+
+    // Method #1 : Using callback in sort function
+    // return Number(n.toString().split('').map(Number).sort((a,b)=>b-a).join(''));
+
+    // Method #2 : Using reverse in sort function
+    return Number(n.toString().split('').map(Number).sort().reverse().join(''));
 }
 
 console.log(descendingOrder(123456789));
