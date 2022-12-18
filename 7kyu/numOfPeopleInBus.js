@@ -6,10 +6,22 @@
 // The second value in the first integer array is 0, since the bus is empty in the first bus stop.
 
 var number = function(busStops){    
-    let totalBusIn = 0;
-    let totalBusOut = 0;    
+
+    // Method #3 : Using reduce method
+    return busStops.reduce((peopleRemain, [peopleIn, peopleOut]) => peopleRemain + peopleIn - peopleOut , 0);
+
+    // Method #2 : Using one for loop
+    // let totalBusIn = 0;
+    // let totalBusOut = 0;    
+    // for(let i=0; i<busStops.length; i++){
+    //     totalBusIn += busStops[i][0];
+    //     totalBusOut += busStops[i][1];
+    // }
+    // return totalBusIn - totalBusOut;
 
     // Method #1 : Using two for loops
+    // let totalBusIn = 0;
+    // let totalBusOut = 0;    
     // for(let i=0; i<busStops.length; i++){        
     //     totalBusIn += Number(busStops[i][0]);        
     // }
@@ -17,14 +29,7 @@ var number = function(busStops){
     // for(let j=0; j<busStops.length; j++){
     //     totalBusOut += Number(busStops[j][1]);
     // }
-    // return totalBusIn - totalBusOut;
-
-    // Method #2 : Using one for loop
-    for(let i=0; i<busStops.length; i++){
-        totalBusIn += busStops[i][0];
-        totalBusOut += busStops[i][1];
-    }
-    return totalBusIn - totalBusOut;
+    // return totalBusIn - totalBusOut;    
 }
 
 console.log(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]));
