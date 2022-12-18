@@ -8,12 +8,21 @@
 var number = function(busStops){    
     let totalBusIn = 0;
     let totalBusOut = 0;    
-    for(let i=0; i<busStops.length; i++){        
-        totalBusIn += Number(busStops[i][0]);        
-    }
 
-    for(let j=0; j<busStops.length; j++){
-        totalBusOut += Number(busStops[j][1]);
+    // Method #1 : Using two for loops
+    // for(let i=0; i<busStops.length; i++){        
+    //     totalBusIn += Number(busStops[i][0]);        
+    // }
+
+    // for(let j=0; j<busStops.length; j++){
+    //     totalBusOut += Number(busStops[j][1]);
+    // }
+    // return totalBusIn - totalBusOut;
+
+    // Method #2 : Using one for loop
+    for(let i=0; i<busStops.length; i++){
+        totalBusIn += busStops[i][0];
+        totalBusOut += busStops[i][1];
     }
     return totalBusIn - totalBusOut;
 }
