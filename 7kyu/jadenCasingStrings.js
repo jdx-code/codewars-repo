@@ -9,5 +9,11 @@ const jadenCasingStrings = (str) => {
     return str.split(' ').map(e=>e[0].toUpperCase() + e.slice(1)).join(' ');
 }
 
+// Solution on Codewars (using this keyword)
+// String.prototype.toJadenCase = function () {
+//     return this.split(' ').map(e=>e[0].toUpperCase() + e.slice(1)).join(' ');  
+// };
+  
+
 console.log(jadenCasingStrings("How can mirrors be real if our eyes aren't real"))
 
