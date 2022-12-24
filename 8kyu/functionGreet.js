@@ -1,4 +1,4 @@
-// Kata # 19 of 8kyu
+// Kata # 20 of 8kyu
 // # Description:
 // Make a simple function called greet that returns the most-famous "hello world!".
 // # Style Points

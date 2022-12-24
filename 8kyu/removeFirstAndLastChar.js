@@ -1,3 +1,4 @@
+// Kata # 10 of 8kyu
 function removeChar(str){   
 
     // Using substr function
