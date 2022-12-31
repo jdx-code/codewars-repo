@@ -11,13 +11,19 @@ const XO = (str) => {
     let xCount = 0;
     let oCount = 0;
     let strArr = str.split('');
-    for(let i=0; i<strArr.length; i++){
-        if(strArr[i] === 'x'){
-            xCount += 1;
-        } else if(strArr[i] === 'o'){
-            oCount += 1;
-        }
-    }
+    // Method #1 Using for loop
+    // for(let i=0; i<strArr.length; i++){
+    //     if(strArr[i] === 'x'){
+    //         xCount += 1;
+    //     } else if(strArr[i] === 'o'){
+    //         oCount += 1;
+    //     }
+    // }
+
+    // Method #2 Using forEach and regular expression
+    strArr.forEach(element => {
+        element.match(/x/i) ? xCount++ : element.match(/o/i) ? oCount++ : true;
+    });
     return xCount === oCount ? true : false;
 }
- console.log(XO("zzoo"));
+ console.log(XO("ooxx"));
