@@ -8,10 +8,11 @@
 // XO("zzoo") => false
 
 const XO = (str) => {
-    let xCount = 0;
-    let oCount = 0;
-    let strArr = str.split('');
+    
     // Method #1 Using for loop
+    // let xCount = 0;
+    // let oCount = 0;
+    // let strArr = str.split('');
     // for(let i=0; i<strArr.length; i++){
     //     if(strArr[i] === 'x'){
     //         xCount += 1;
@@ -20,10 +21,18 @@ const XO = (str) => {
     //     }
     // }
 
-    // Method #2 Using forEach and regular expression
-    strArr.forEach(element => {
-        element.match(/x/i) ? xCount++ : element.match(/o/i) ? oCount++ : true;
-    });
-    return xCount === oCount ? true : false;
+    // Method #2 Using forEach and match function with regular expression
+    // let xCount = 0;
+    // let oCount = 0;
+    // let strArr = str.split('');
+    // strArr.forEach(element => {
+    //     element.match(/x/i) ? xCount++ : element.match(/o/i) ? oCount++ : true;
+    // });
+    // return xCount === oCount ? true : false; 
+    
+    // Method #3 Using match function with regular function directly on string
+    let xCount = str.match(/x/ig);
+    let oCount = str.match(/o/ig);
+    return (xCount && xCount.length) === (oCount && oCount.length);
 }
- console.log(XO("ooxx"));
+ console.log(XO("zzoo"));
