@@ -9,7 +9,7 @@
 
 const XO = (str) => {
     
-    // Method #1 Using for loop
+    // Method #1 Using simple for loop
     // let xCount = 0;
     // let oCount = 0;
     // let strArr = str.split('');
