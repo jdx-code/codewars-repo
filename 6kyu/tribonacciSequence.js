@@ -9,3 +9,23 @@
 // Signature will always contain 3 numbers; n will always be a non-negative number; if n == 0, then return an empty array (except in C return NULL) and be ready for anything else which is not clearly specified ;)
 // If you enjoyed this kata more advanced and generalized version of it can be found in the Xbonacci kata
 // [Personal thanks to Professor Jim Fowler on Coursera for his awesome classes that I really recommend to any math enthusiast and for showing me this mathematical curiosity too with his usual contagious passion :)]
+
+
+const tribonacci = (signature, n) => {    
+    if(n>3){
+        for(let i=0; i<n; i++){
+            signature.push(signature[i]+signature[i+1]+signature[i+2])
+        }
+        return signature.slice(0,n);
+    } else if(n===3) {
+        return signature;
+    } else if(n===2) {
+        return signature.slice(0,2);
+    } else if(n===1) {
+        return signature.slice(0,1);
+    } else {
+        return signature.slice(100);
+    }
+}
+
+console.log(tribonacci([1, 1, 1], 10))
