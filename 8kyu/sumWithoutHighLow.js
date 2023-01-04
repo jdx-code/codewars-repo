@@ -10,11 +10,14 @@
 
 const sumWithoutHighLow = (arr) => {
     // Method #1
-    if(arr != null){
-        return arr.length < 3 ? 0 : arr.sort((a,b)=>a-b).reduce((acc, ele) => acc + ele, 0)-arr[0]-arr[arr.length-1];
-    } else {
-        return 0;
-    }
+    // if(arr != null){
+    //     return arr.length < 3 ? 0 : arr.sort((a,b)=>a-b).reduce((acc, ele) => acc + ele, 0)-arr[0]-arr[arr.length-1];
+    // } else {
+    //     return 0;
+    // }
+
+    // Method #2
+    return Array.isArray(arr) && arr.length > 2 ? arr.sort((a,b)=>a-b).slice(1,arr.length-1).reduce((acc, ele) => acc + ele, 0) : 0;
 }
 
-console.log(sumWithoutHighLow([ 6, 2, 1, 8, 10]));
+console.log(sumWithoutHighLow([ -6, -20, -1, -10, -12 ]));
