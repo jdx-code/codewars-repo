@@ -7,7 +7,10 @@
 // ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
 
 const testingOneTwoThree = (arr) => {
-    // Method #1 : Using map function without template literals
-    return arr.map((ele, i) => i+1 +': '+ ele)
+    // Method #1 : Using map function with simple concatenation
+    // return arr.map((ele, i) => i+1 +': '+ ele);
+
+    // Method #2 : Using map function with template literals
+    return arr.map((ele, i) => `${i+1} : ${ele}`);
 }
 console.log(testingOneTwoThree(["a", "b", "c"]));
