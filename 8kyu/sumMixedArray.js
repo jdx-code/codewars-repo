@@ -4,7 +4,10 @@
 
 const sumMix = (x) => {    
     // Method #1: Using map(Number)
-    return x.map(Number).reduce((acc, ele) => acc + ele, 0);
+    // return x.map(Number).reduce((acc, ele) => acc + ele, 0);
+
+    // Method #2: Using map with Unary operator
+    return x.map(item => +item).reduce((acc, item) => acc + item, 0);
 }
 
 console.log(sumMix([9, 3, '7', '3']));
