@@ -7,6 +7,9 @@
 const squareEveryDigit = (num) => {
 
     // Method #1  
-    return Number(num.toString().split('').map(item=> item*item).join(''));
+    // return Number(num.toString().split('').map(item=> item*item).join(''));
+
+    // Method #2  
+    return +num.toString().split('').map(item=> item*item).join('');
 }
  console.log(squareEveryDigit(9119));
