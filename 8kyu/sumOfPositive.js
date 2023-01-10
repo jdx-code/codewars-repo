@@ -5,9 +5,12 @@
 // Note: if there is nothing to sum, the sum is default to 0.
 
 const sumOfPositives = (arr) => {
-    
+
     // Method #1 : Using reduce with filter 
-    return arr.filter(item=>item>0).reduce((sum, item) => sum + item, 0);  
+    // return arr.filter(item=>item>0).reduce((sum, item) => sum + item, 0);  
+
+    // Method #2 : Using only reduce
+    return arr.reduce((acc, item) => acc + (item > 0 ? item : 0), 0);
 
 }
 
