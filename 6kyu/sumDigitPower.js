@@ -18,10 +18,12 @@ const sumDigitPower = (start, end) => {
     let arr = [];
     for(let i=start; i<=end; i++){
         let sum=0;
-        for(let j=0; j<=String(i).length; j++){
-            sum += Math.pow(parseInt(String(i)[j]), j+1);
-            if(sum == i) arr.push(sum);
-        }
+        for(let j=0; j<=i.toString().length; j++){
+            sum += Math.pow(Number(i.toString()[j]), j+1);            
+            if(sum == i) {
+                arr.push(sum);
+            } 
+        }        
     }
     return arr;
 }
