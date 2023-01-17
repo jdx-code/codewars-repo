@@ -24,8 +24,12 @@ const isSquare = (n) => {
     // let sq = Math.round(Math.sqrt(n));
     // return sq*sq === n;
 
-    // Method #2 : Solution as found on Codewars
-    return Math.sqrt(n) % 1 === 0;
+    // Some other ways to solve the same problem 
+    // Method #2 : Source >> Codewars
+    // return Math.sqrt(n) % 1 === 0;              // if sqrt of n does not give a remainder of 0 then the number is not an integer number.
+
+    // Method #3 : Source >> Codewars
+    return Number.isInteger(Math.sqrt(n));         // checks if sqrt is integer type
 }
 
 // console.log(isSquare(-1));
