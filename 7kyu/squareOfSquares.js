@@ -21,14 +21,17 @@
 
 const isSquare = (n) => {
     // Method #1 : My way
-    let sq = Math.round(Math.sqrt(n));
-    return sq*sq === n;
+    // let sq = Math.round(Math.sqrt(n));
+    // return sq*sq === n;
+
+    // Method #2 : Solution as found on Codewars
+    return Math.sqrt(n) % 1 === 0;
 }
 
 // console.log(isSquare(-1));
 // console.log(isSquare(0));
 // console.log(isSquare(3));
 // console.log(isSquare(4));
-// console.log(isSquare(25));
+console.log(isSquare(25));
 // console.log(isSquare(26));
 // console.log(isSquare(88));
