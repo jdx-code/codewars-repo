@@ -5,6 +5,7 @@
 const countConsonants = (str) => {    
     // Solution unlocked  
     // Useful link : https://bobbyhadz.com/blog/javascript-cannot-read-property-length-of-null
+    
     return (str.match(/[bcdfghjklmnpqrstvwxyz]/ig) || [] ).length;    
 }
 
