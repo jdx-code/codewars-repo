@@ -17,7 +17,7 @@ const highestAndLowest = (str) => {
         return arr.join(' ');
     } else {
         return arr.sort((a,b)=>b-a).filter((item, index)=> {
-            if(index===0 || index===arr.length-1)
+            if(index === 0 || index === arr.length-1)
                 return item;
         }).join(' ');
     }    
