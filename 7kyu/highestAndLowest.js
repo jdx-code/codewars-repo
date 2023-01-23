@@ -11,16 +11,25 @@
 
 const highestAndLowest = (str) => {
     // Method #1 : My solution    
-    let arr = str.split(' ');    
-    if(arr.length === 1){
-        arr.push(str);
-        return arr.join(' ');
-    } else {
-        return arr.sort((a,b)=>b-a).filter((item, index)=> {
-            if(index === 0 || index === arr.length-1)
-                return item;
-        }).join(' ');
-    }    
+    // let arr = str.split(' ');    
+    // if(arr.length === 1){
+    //     arr.push(str);
+    //     return arr.join(' ');
+    // } else {
+    //     return arr.sort((a,b)=>b-a).filter((item, index)=> {
+    //         if(index === 0 || index === arr.length-1)
+    //             return item;
+    //     }).join(' ');
+    // }
+    
+    // Method #2 : Solution by other users on Codewars   
+    // numbers = str.split(' ').map(Number);
+    // return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
+
+    // Method #3 : Solution by other users on Codewars    
+    numbers = str.split(' ');
+    return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+    
 }
 
 // console.log(highestAndLowest("1 2 3 4 5"));
