@@ -12,7 +12,10 @@
 
 const highestProfitWin = (arr) => {    
     // Method #1: My way
-    return `${Math.min(...arr)} ${Math.max(...arr)}`.split(' ').map(Number);
+    // return `${Math.min(...arr)} ${Math.max(...arr)}`.split(' ').map(Number);
+
+    // Method #2: Solution by other users on Codewars
+    return [Math.min(...arr), Math.max(...arr)];
 }
 
 console.log(highestProfitWin([1,2,3,4,5]));
