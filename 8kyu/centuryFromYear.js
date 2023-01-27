@@ -9,10 +9,18 @@
 // 2000 --> 20
 
 const century = (year) => {
-   return Math.ceil(year/100);
+    // Method #1: Solution from Codewars   
+    // return Math.ceil(year/100);
+
+    // Method #2: Solution from Codewars
+    return (year + 99) / 100 | 0;
 }
 console.log(century(89));
 console.log(century(1705));
 console.log(century(1900));
 console.log(century(1601));
 console.log(century(2000));
+console.log(century(56.21));
+console.log(century(-56));
+console.log(century('hello'));
+
