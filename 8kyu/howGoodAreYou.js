@@ -9,11 +9,14 @@
 
 const howGoodAreYou = (classPoints, yourPoints) => {
     // Method #1 : Solution by me
-    classPoints.push(yourPoints);    
-    let totalStudents = classPoints.length;
-    let classPointsTotal = classPoints.reduce((acc, item) => acc + item, 0);
-    let averagePoints = classPointsTotal/totalStudents;
-    return yourPoints > averagePoints;
+    // classPoints.push(yourPoints);    
+    // let totalStudents = classPoints.length;
+    // let classPointsTotal = classPoints.reduce((acc, item) => acc + item, 0);
+    // let averagePoints = classPointsTotal/totalStudents;
+    // return yourPoints > averagePoints;
+
+    // Method #2 : Solution found on Codewars
+    return yourPoints > classPoints.reduce((acc, item) => acc + item, 0)/classPoints.length;
 }
 
 console.log(howGoodAreYou([100, 40, 34, 57, 29, 72, 57, 88], 75));
