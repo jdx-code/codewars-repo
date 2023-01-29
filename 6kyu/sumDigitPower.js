@@ -13,7 +13,7 @@
 // Enjoy it!!
 
 const sumDigitPower = (start, end) => {
-
+    
     //Method #1: Using for loops
     let arr = [];
     for(let i=start; i<=end; i++){
