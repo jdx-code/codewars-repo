@@ -7,6 +7,7 @@
 // NOTE: All numbers will be whole numbers greater than 0.
 
 const expandedForm = (num) => {
+    // Method #1 : Solution from Codewars
     return num.toString()
                 .split('')
                 .reverse()
