@@ -15,7 +15,10 @@
 
 const rowSumOddNumbers = (num) => {
     // Method #1 : Solution found on Codewars
-    return n * n * n;
+    // return n * n * n;
+
+    // Method #2 : Solution found on Codewars
+    return Math.pow(n, 3);
 }
 
 console.log(rowSumOddNumbers(1));
