@@ -6,7 +6,10 @@
 
 const cockroachSpeed = (s) => {
     // Method #1: Solution by me
-    return Math.floor(s * 27.7778);
+    // return Math.floor(s * 27.7778);
+
+    // Method #2: Solution found on Codewars
+    return Math.floor((s * 100000)/3600);
 }
 
 console.log(cockroachSpeed(1.08));
