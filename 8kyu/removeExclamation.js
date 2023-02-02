@@ -3,7 +3,10 @@
 
 const removeExclamationMarks = (str) => {
     // Method #1 : Solution by me
-    return str.split('').filter(e => e!='!').join('');
+    // return str.split('').filter(e => e!='!').join('');
+
+    //Method #2 : Solution from Codewars
+    return str.split('!').join('');
 }
 
 console.log(removeExclamationMarks("Hello World!"));
