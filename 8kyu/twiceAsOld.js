@@ -10,7 +10,10 @@
 
 const twiceAsOld = (dadYearsOld, sonYearsOld) => {
     // Method #1 : Solution by me
-    return Math.abs(dadYearsOld - 2*sonYearsOld);
+    // return Math.abs(dadYearsOld - 2*sonYearsOld);
+
+    // Method #2 : Solution found on Codewars
+    return dadYearsOld > 2*sonYearsOld ? dadYearsOld - 2*sonYearsOld : 2*sonYearsOld - dadYearsOld;
 }
 
 console.log(twiceAsOld(36, 7));
