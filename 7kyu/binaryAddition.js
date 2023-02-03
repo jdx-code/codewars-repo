@@ -10,16 +10,19 @@
 
 const binaryAddition = (a, b) => {
     // Method #1 : Solution by me
-    let sum = a + b;
-    let binarySum = [];
-    while (sum>0){
-        let rem = sum%2;
-        if(rem === 0 || rem === 1){
-            binarySum.push(rem);
-        }        
-        sum = Math.floor(sum/2);
-    }
-    return binarySum.reverse().join('');
+    // let sum = a + b;
+    // let binarySum = [];
+    // while (sum>0){
+    //     let rem = sum%2;
+    //     if(rem === 0 || rem === 1){
+    //         binarySum.push(rem);
+    //     }        
+    //     sum = Math.floor(sum/2);
+    // }
+    // return binarySum.reverse().join('');
+
+    // Method #2 : Solution found on Codewars
+    return (a+b).toString(2);
 }
 
 console.log(binaryAddition(5, 9));
