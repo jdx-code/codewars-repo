@@ -6,7 +6,11 @@
 // Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
 
 const getAge = (str) => {
+    // Method #1 : Solution by me
     return parseInt(str.split(' ')[0]);
+
+    
+
 }
 
 console.log(getAge("4 years old"));
