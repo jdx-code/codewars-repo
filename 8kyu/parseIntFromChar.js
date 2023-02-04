@@ -10,7 +10,10 @@ const getAge = (str) => {
     // return parseInt(str.split(' ')[0]);
 
     // Method #2 : Solution found on Codewars
-    return parseInt(str);
+    // return parseInt(str);
+
+    // Method #3 : Solution found on Codewars
+    return +str[0];
 
 }
 
