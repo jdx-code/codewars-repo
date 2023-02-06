@@ -14,6 +14,9 @@
 // const sumTheStrings = (str1, str2) => (parseInt(str1) + parseInt(str2)).toString();
 
 // Method #2 : Solutions by me
-const sumTheStrings = (str1, str2) => (+str1 + +str2).toString();
+// const sumTheStrings = (str1, str2) => (+str1 + +str2).toString();
+
+// Method #3 : Solutions found on Codewars
+const sumTheStrings = (str1, str2) => String(Number(str1) + Number(str2));
 
 console.log(sumTheStrings("4", "5"));
