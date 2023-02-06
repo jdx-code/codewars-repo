@@ -14,12 +14,15 @@
 
 Object.defineProperty(Array.prototype, 'numberOfOccurrences',{
     value : function numberOfOccurrences(num){
-        // Method #1 : Multiple lines
+        // Method #1 : Multiple lines | Use of reduce
         // return this.reduce((acc, current) => {
         //     return current === num ? acc + 1 : acc;
         // }, 0);
-        // Method #2 : Single line
-        return this.reduce((acc, current) => current === num ? acc + 1 : acc, 0);
+        // Method #2 : Single line | Use of reduce
+        // return this.reduce((acc, current) => current === num ? acc + 1 : acc, 0);
+
+        // Method #3 : Using filter method
+        return this.filter(element => element === num).length;
     }
 })
 
