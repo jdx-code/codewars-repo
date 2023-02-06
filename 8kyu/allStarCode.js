@@ -11,7 +11,10 @@
 
 const allStarCode = (string1, string2) => {
     // Method #1 : Solution by me
-    return string1.split('').filter(item=>item === string2).length;
+    // return string1.split('').filter(item=>item === string2).length;
+
+    // Method #2 : Solution found on Codewars
+    return string1.split(string2).length-1;
 }
 
 console.log(allStarCode("Hello", "o"));
