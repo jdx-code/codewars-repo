@@ -11,8 +11,9 @@
 //     Inputs and the expected output will never exceed the signed 32-bit integer limit (2^31 - 1)
 
 // Method #1 : Solutions by me
-const sumTheStrings = (str1, str2) => (parseInt(str1) + parseInt(str2)).toString();
+// const sumTheStrings = (str1, str2) => (parseInt(str1) + parseInt(str2)).toString();
 
-
+// Method #2 : Solutions by me
+const sumTheStrings = (str1, str2) => (+str1 + +str2).toString();
 
 console.log(sumTheStrings("4", "5"));
