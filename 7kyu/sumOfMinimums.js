@@ -12,12 +12,15 @@
 
 const sumOfMinimum = (arr) => {    
     // Method #1 : Solution by me
-    let sum = 0;
-    for(innerArr of arr){
-        innerArr.sort((a,b) => a - b);
-        sum += innerArr[0];
-    }    
-    return sum;
+    // let sum = 0;
+    // for(innerArr of arr){
+    //     innerArr.sort((a,b) => a - b);
+    //     sum += innerArr[0];
+    // }    
+    // return sum;
+
+    // Method #2 : Solution found on Codewars
+    return arr.reduce((acc, item) => acc + Math.min(...item), 0);
 }
 
 let listTwoDim = [];
