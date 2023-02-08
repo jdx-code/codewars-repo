@@ -23,9 +23,14 @@ const removeTheMinimum = (arr) => {
         
     // return arr1.concat(arr2);
 
-    // Method #2 : Solution found on Codewars
-    let indexOfFirstMinElement = arr.indexOf(Math.min(...arr));
-    return [...arr.slice(0, indexOfFirstMinElement), ...arr.slice(indexOfFirstMinElement + 1)];
+    // Method #2 : Solution found on Codewars 
+    // let indexOfFirstMinElement = arr.indexOf(Math.min(...arr));
+    // return [...arr.slice(0, indexOfFirstMinElement), ...arr.slice(indexOfFirstMinElement + 1)];
+
+    // Method #3 : Solution found on Codewars // using filter method
+    let minElement = Math.min(...arr);
+    return arr.filter((item, index, arr) => index !== arr.indexOf(minElement));
+
 }
 
 console.log(removeTheMinimum([1,2,3,4,5]));
