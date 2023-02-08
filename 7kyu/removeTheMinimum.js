@@ -17,11 +17,15 @@
 
 const removeTheMinimum = (arr) => {
     // Method #1 : Solution by me
-    let min = Math.min(...arr);    
-    let arr1 = arr.slice(0, arr.indexOf(min));    
-    let arr2 = arr.slice(arr.indexOf(min)+1, arr.length)
+    // let min = Math.min(...arr);    
+    // let arr1 = arr.slice(0, arr.indexOf(min));    
+    // let arr2 = arr.slice(arr.indexOf(min)+1, arr.length)
         
-    return arr1.concat(arr2);
+    // return arr1.concat(arr2);
+
+    // Method #2 : Solution found on Codewars
+    let indexOfFirstMinElement = arr.indexOf(Math.min(...arr));
+    return [...arr.slice(0, indexOfFirstMinElement), ...arr.slice(indexOfFirstMinElement + 1)];
 }
 
 console.log(removeTheMinimum([1,2,3,4,5]));
