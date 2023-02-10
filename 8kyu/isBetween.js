@@ -9,11 +9,19 @@
 
 const isBetween = (a, b) => {
     // Method #1 : Solution by me
-    let arr = [];
-    for(let i=a; i<=b; i++){
-        arr.push(i);
-    }
+    // let arr = [];
+    // for(let i=a; i<=b; i++){
+    //     arr.push(i);
+    // }
+    // return arr;
+
+    // Method #2 : Solution found on Codewars
+    const min = Math.min(a,b);
+    const max = Math.max(a,b);
+    
+    for(var i=min, arr = []; i<=max; arr.push(i++));
     return arr;
+    
 }
 
 console.log(isBetween(1, 4));
