@@ -6,13 +6,18 @@
 // uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 
 const uniqueInOrder = (arr) => {
-    let newArr = [];
-    for(let i=0; i<arr.length; i++){
-        if(arr[i] !== arr[i+1]){
-            newArr.push(arr[i]);
-        }
-    }
-    return newArr;
+
+    // Method #1 : Solution found on Codewars
+    // let newArr = [];
+    // for(let i=0; i<arr.length; i++){
+    //     if(arr[i] !== arr[i+1]){
+    //         newArr.push(arr[i]);
+    //     }
+    // }
+    // return newArr;
+
+    // Method #2 : Solution found on Codewars
+    return [...arr].filter((ele, i) => ele !== arr[i-1]);
 }
 
 
