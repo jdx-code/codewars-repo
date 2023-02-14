@@ -17,6 +17,20 @@ function DNAStrand(dna){
     // return dna.replace(/[TACG]/g, m => chars[m]);    
 
     //Method #2
-    return dna.replace(/[TACG]/g, m => { return {'A':'T', 'T':'A', 'C':'G', 'G':'C'}[m]; });
+    // return dna.replace(/[TACG]/g, m => { 
+    //     return {'A':'T', 'T':'A', 'C':'G', 'G':'C'}[m]; 
+    // });
+
+    //Method #3 : Solution found on Codewars
+    return dna.replace(/./g, function(e){
+        return DNAStrand.pairs[e];
+    })       
+}
+
+DNAStrand.pairs = {
+    'A':'T', 
+    'T':'A', 
+    'C':'G', 
+    'G':'C',
 }
 console.log(DNAStrand('AATT'));
