@@ -10,9 +10,13 @@
 // output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
 
 const openOrSenior = (data) => {
-    return data.map((ele) => {
-        return (ele[0] >= 55 && ele[1] > 7) ? "Senior" : "Open";
-    });
+    // Method #1 : My Solution 
+    // return data.map((ele) => {
+    //     return (ele[0] >= 55 && ele[1] > 7) ? "Senior" : "Open";
+    // });
+
+    // Method #2 : Solution found on Codewars
+    return data.map(([age, handicap]) => (age >= 55 && handicap > 7) ? "Senior" : "Open");
 }
 
 console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]));
