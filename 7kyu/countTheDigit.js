@@ -14,12 +14,12 @@
 // Note that 121 has twice the digit 1.
 
 const counTheDigit = (num, digit) => {
-    // Solution found on Codewars
+    // Method #1 : Solution found on Codewars
     let o = '';
     for(let i = 0; i <= num; i++){
       o += Math.pow(i, 2);
     }
-  return o.split(digit).length-1;
+    return o.split(digit).length-1;
 }
 
 console.log(counTheDigit(10, 1));
