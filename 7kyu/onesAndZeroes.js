@@ -14,9 +14,13 @@
 
 const onesAndZeroes = (arr) => {
     // Method #1 : My solution
-    return arr.reverse().reduce((acc, currentVal, currentIndex) => {
-      return acc + currentVal * Math.pow(2, currentIndex)
-    }, 0);
+    // return arr.reverse().reduce((acc, currentVal, currentIndex) => {
+    //   return acc + currentVal * Math.pow(2, currentIndex)
+    // }, 0);
+
+    // Method #2 : Solution found on Codewars
+    return parseInt(arr.join(''), 2);
+
 }
 
 console.log(onesAndZeroes([0, 0, 0, 1]));
