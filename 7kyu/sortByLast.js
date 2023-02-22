@@ -5,7 +5,8 @@
 
 const sortByLast = (str) => {
     // Method #1 : Using charCodeAt() which returns a number
-    return str.split(' ').sort((a,b) => a.charCodeAt(a.length-1) - b.charCodeAt(b.length-1));
+    // return str.split(' ').sort((a,b) => a.charCodeAt(a.length-1) - b.charCodeAt(b.length-1));
+
 }
 
 console.log(sortByLast('man i need a taxi up to ubud'));
