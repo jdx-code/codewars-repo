@@ -18,7 +18,7 @@ const rowSumOddNumbers = (num) => {
     // return n * n * n;
 
     // Method #2 : Solution found on Codewars
-    return Math.pow(n, 3);
+    return Math.pow(num, 3);
 }
 
 console.log(rowSumOddNumbers(1));
