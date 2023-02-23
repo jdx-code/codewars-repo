@@ -8,14 +8,24 @@
 
 function cleanedCounts(data) {
     // Method #1: This was my attempt but it failed because here I used newArr as a completely new array where the elements would get pushed.
-    let newArr = [];
-    for(let i=0; i<data.length; i++){
-        if(data[i]>data[i+1]){
-            data[i+1] = data[i];
+    // let newArr = [];
+    // for(let i=0; i<data.length; i++){
+    //     if(data[i]>data[i+1]){
+    //         data[i+1] = data[i];
+    //     }
+    //     newArr.push(data[i]);
+    // }   
+    // return newArr;
+    
+    // Method #2: Solution found on Codewars. This will work because newArr is a new refernce to the same array. Hence the original array is not modified here. Just the references are different.
+    let newArr = [...data];
+    for(let i=0; i<newArr.length; i++){
+        if(newArr[i]>newArr[i+1]){
+        newArr[i+1] = newArr[i];
         }
-        newArr.push(data[i]);
-    }   
+    }
     return newArr;
+    
 }
 
 console.log(cleanedCounts([1, 1, 2, 2, 1, 2, 2, 2, 2]));
