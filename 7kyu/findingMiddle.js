@@ -9,10 +9,20 @@
 // 10 is the number that fits between 5 and 14 and the index of 10 in the input array is 1.
 
 // Method #1 : Using sort( ) and indexOf( )
+// const findingMiddle = (arr) => {
+//     let newArr = [...arr];
+//     const midElement = newArr.sort((a, b) => +a - +b)[1];
+//     return arr.indexOf(midElement);
+// }
+
 const findingMiddle = (arr) => {
-    let newArr = [...arr];
-    const midElement = newArr.sort((a, b) => +a - +b)[1];
-    return arr.indexOf(midElement);
+    let minElement = Math.min(...arr);
+    let maxElement = Math.max(...arr);
+    return arr.findIndex(e=>{
+        if(e>minElement && e<maxElement){
+            return e;
+        }
+    })        
 }
 
 console.log(findingMiddle([2, 3, 1]));
