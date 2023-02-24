@@ -8,21 +8,27 @@
 // gimme([5, 10, 14]) => 1
 // 10 is the number that fits between 5 and 14 and the index of 10 in the input array is 1.
 
-// Method #1 : Using sort( ) and indexOf( )
+// Method #1 : Using sort() and indexOf()
 // const findingMiddle = (arr) => {
 //     let newArr = [...arr];
 //     const midElement = newArr.sort((a, b) => +a - +b)[1];
 //     return arr.indexOf(midElement);
 // }
 
-const findingMiddle = (arr) => {
-    let minElement = Math.min(...arr);
-    let maxElement = Math.max(...arr);
-    return arr.findIndex(e=>{
-        if(e>minElement && e<maxElement){
-            return e;
-        }
-    })        
+// Method #2 : Using Math.min(), max() and findIndex()
+// const findingMiddle = (arr) => {
+//     let minElement = Math.min(...arr);
+//     let maxElement = Math.max(...arr);
+//     return arr.findIndex(e=>{               
+//         if(e>minElement && e<maxElement){
+//             return e;
+//         }
+//     })        
+// }
+
+// Method #3 : Using sort() and indexOf on the same array
+const findingMiddle = (arr) =>{
+    return arr.indexOf([...arr].sort((a,b) => a - b)[1]);
 }
 
 console.log(findingMiddle([2, 3, 1]));
