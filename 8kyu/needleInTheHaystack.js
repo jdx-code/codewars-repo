@@ -5,3 +5,10 @@
 // "found the needle at position " plus the index it found the needle, so:
 // Example(Input --> Output)
 // ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5" 
+
+
+const findNeedle = (arr) => {
+    return `found the needle at position ${arr.indexOf('needle')}`;
+}
+
+console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
