@@ -5,7 +5,8 @@
 // solution(null); // should return []
 
 const sortNumbers = (arr) => {
-    return arr ? arr.sort((a, b) => +a - +b) : [];
+    // Method #1 : Solution by me
+    return arr ? arr.sort((a, b) => +a - +b) : [];    
 }
 
 console.log(sortNumbers([1, 2, 10, 50, 5]));
