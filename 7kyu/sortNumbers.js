@@ -6,7 +6,10 @@
 
 const sortNumbers = (arr) => {
     // Method #1 : Solution by me
-    return arr ? arr.sort((a, b) => +a - +b) : [];    
+    // return arr ? arr.sort((a, b) => +a - +b) : [];  
+    
+    // Method #2 : Solution found on Codewars
+    return (arr || []).sort((a, b) => a - b);
 }
 
 console.log(sortNumbers([1, 2, 10, 50, 5]));
