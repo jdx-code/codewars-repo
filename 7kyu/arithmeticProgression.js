@@ -9,14 +9,14 @@ const arithmeticProg = (a, d, n) => {
     // Method #1 : Solution found on Codewars
     // let arr = [a];            
     // while(n-1){                 
+    
     //     arr.push(a+=d);       
     //     --n;
     // }
     // return arr.join(', ');
-
-    // Method #2 : Solution found on Codewars
+    
     let arr = [a];
-    while(--n){
+    while(--n){             
         arr.push(a+=d);
     }
     return arr.join(', ');
