@@ -7,6 +7,7 @@
 // isIsogram "aba" = false
 
 const isIsogram = (str) => {
+    // Method #1 : Solution by me
     let arr = [...str.toLowerCase()];
     let newArr = [];
     for(a of arr){
