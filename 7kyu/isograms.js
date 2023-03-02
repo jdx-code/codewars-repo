@@ -8,14 +8,21 @@
 
 const isIsogram = (str) => {
     // Method #1 : Solution by me
+    // let arr = [...str.toLowerCase()];
+    // let newArr = [];
+    // for(a of arr){
+    //     if(!newArr.includes(a)){
+    //         newArr.push(a);
+    //     }
+    // }
+    // return arr.join('') === newArr.join('');
+
+    // Method #2 : Solution found on Codewars
     let arr = [...str.toLowerCase()];
-    let newArr = [];
-    for(a of arr){
-        if(!newArr.includes(a)){
-            newArr.push(a);
-        }
-    }
-    return arr.join('') === newArr.join('');
+
+    return arr.every(ele => {
+        return arr.indexOf(ele) == arr.lastIndexOf(ele);
+    })
 }
 
 console.log(isIsogram("Dermatoglyphics"));
