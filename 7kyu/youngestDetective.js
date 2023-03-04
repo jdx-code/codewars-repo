@@ -11,7 +11,19 @@
 // Example: input: [5, 0, 3], "I Love You" output: "ivy" (0 = "i", 3 = "v", 5 = "y")
 
 const youngestDetective = (arr, str) => {
-
+    let sortedArr = arr.sort();
+    let newArr = [];
+    let strWithoutSpaceInLower = str.split(' ').join('').toLowerCase();
+    for(ele of sortedArr){     
+        if(strWithoutSpaceInLower.charAt(ele)){
+            newArr.push(strWithoutSpaceInLower[ele]);
+        }           
+    }
+    return newArr.length == arr.length ? newArr.join('') : 'No mission today';    
 }
 
 console.log(youngestDetective([5, 0, 3], "I Love You"));
+console.log(youngestDetective([12, 4, 6], "Good Morning"));
+console.log(youngestDetective([29, 31, 8], "The quick brown fox jumps over the lazy dog"));
+
+
