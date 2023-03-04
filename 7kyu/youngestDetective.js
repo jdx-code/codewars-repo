@@ -9,3 +9,9 @@
 //     if you can't find one of the letters using the index numbers, return "No mission today". Jenny would be very sad, but that's life... :(
 
 // Example: input: [5, 0, 3], "I Love You" output: "ivy" (0 = "i", 3 = "v", 5 = "y")
+
+const youngestDetective = (arr, str) => {
+
+}
+
+console.log(youngestDetective([5, 0, 3], "I Love You"));
