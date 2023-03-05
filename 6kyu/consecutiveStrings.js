@@ -20,9 +20,8 @@
 const longestConsecutiveStr = ( strarr, k) => {
 
     return strarr.map((ele, index) => {
-        if(index != strarr.length)
-        return k > 1 ? (ele + strarr[index+(k-1)]) : ele;
-    }).sort((a,b) => (b.length - a.length))
+        return k > 1 ? (index != strarr.length - 1 ? ele + strarr[index+(k-1)] : '') : ele;        
+    }).sort((a, b) => b.length - a.length)[0];
 
 }
 
