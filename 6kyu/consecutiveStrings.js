@@ -17,11 +17,17 @@
 // Note
 // consecutive strings : follow one after another without an interruption
 
-const longestConsecutiveStr = ( strarr, k) => {
+const longestConsecutiveStr = (strarr, k) => {
 
-    return strarr.map((ele, index) => {
-        return k > 1 ? (index != strarr.length - 1 ? ele + strarr[index+(k-1)] : '') : ele;        
-    }).sort((a, b) => b.length - a.length)[0];
+    // Method #1 : Solution by me 
+    const lenOfStr = strarr.length;
+    if(lenOfStr == 0 || k > lenOfStr || k <= 0){
+        return '';
+    } else {
+        return strarr.map((ele, index) => {
+            return k > 1 && index != strarr.length - 1 ? strarr.slice(index, index + k).join('') : ele;
+        }).sort((a,b) => b.length - a.length)[0];
+    }
 
 }
 
@@ -29,4 +35,6 @@ console.log(longestConsecutiveStr(["tree", "foling", "trashy", "blue", "abcdef",
 console.log(longestConsecutiveStr(["zone", "abigail", "theta", "form", "libe", "zas"], 2));
 console.log(longestConsecutiveStr(["ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"], 1));
 
+console.log(longestConsecutiveStr(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 3));
+console.log(longestConsecutiveStr(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 15));
 
