@@ -19,6 +19,7 @@
 //     }, {})    
 // }
 
+
 // Method #3 : Using spread operator and reduce.
 const countCharacterInString = str => {
     return [...str].reduce((counter, s) => {
