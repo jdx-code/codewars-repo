@@ -12,11 +12,19 @@
 // }
 
 // Method #2 : Using split and reduce. Solution found on Codewars
-const countCharacterInString = (str) => {    
-    return str.split('').reduce((counter, s) => {
+// const countCharacterInString = (str) => {    
+//     return str.split('').reduce((counter, s) => {
+//         counter[s] = (counter[s] || 0) + 1;
+//         return counter;
+//     }, {})    
+// }
+
+// Method #3 : Using spread operator and reduce.
+const countCharacterInString = str => {
+    return [...str].reduce((counter, s) => {
         counter[s] = (counter[s] || 0) + 1;
         return counter;
-    }, {})    
+    }, {})
 }
 
 console.log(countCharacterInString('aba'));
