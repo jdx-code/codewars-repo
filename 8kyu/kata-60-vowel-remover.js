@@ -13,8 +13,11 @@ const vowelRemover = str => {
     // Method #1 : Solution by me
     // return [...str].filter(item => !item.match(/[a,e,i,o,u]/)).join('');
 
-    // method #2 : Solution found on Codewars
-    return str.replace(/[aeiou]/g, '');
+    // Method #2 : Solution found on Codewars
+    // return str.replace(/[aeiou]/g, '');
+
+    // Method #3 : Solution found on Codewars
+    return [...str].filter(item  => !'aeiou'.includes(item)).join('');
 }
 
 console.log(vowelRemover("hello"));
