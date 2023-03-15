@@ -28,3 +28,23 @@
 // Note:
 //     You can see examples for your language in "Sample Tests".
 
+
+
+const productFib = prod => {
+    let prevVal = 0;
+    let currentVal = 1;
+    let fiboArr = [0, 1];    
+    while(prevVal*currentVal < prod){
+        let nextVal = prevVal + currentVal;
+        prevVal = currentVal;
+        currentVal = nextVal;     
+        fiboArr.push(nextVal);
+    }
+
+    return [prevVal, currentVal, prevVal*currentVal === prod];
+    
+
+}
+
+console.log(productFib(714));
+console.log(productFib(800));
