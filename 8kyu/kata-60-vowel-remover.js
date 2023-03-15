@@ -9,3 +9,12 @@
 //     don't worry about uppercase vowels
 //     y is not considered a vowel for this kata
 
+const vowelRemover = str => {
+    // Method #1 : Solution by me
+    return [...str].filter(item => !item.match(/[a,e,i,o,u]/)).join('');
+}
+
+console.log(vowelRemover("hello"));
+console.log(vowelRemover("codewars"));
+console.log(vowelRemover("goodbye"));
+console.log(vowelRemover("HELLO"));
