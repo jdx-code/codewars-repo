@@ -13,16 +13,19 @@ const findTheOddInt = (arr) => {
     // return arr.reduce((a,b) => a ^ b);
 
     // Method #2 : Solution found on Codewars
-    let obj = {};
-    arr.forEach(element => {
-        obj[element] ? obj[element]++ : obj[element] = 1;
-    });
+    // let obj = {};
+    // arr.forEach(element => {
+    //     obj[element] ? obj[element]++ : obj[element] = 1;
+    // });
 
-    // console.log(obj);
+    // // console.log(obj);
 
-    for(prop in obj){
-        if(obj[prop] % 2 !== 0) return Number(prop);
-    }
+    // for(prop in obj){
+    //     if(obj[prop] % 2 !== 0) return Number(prop);
+    // }
+
+    // Method #3 : Solution found on Codewars
+    return arr.find(item => arr.filter(ele => ele == item).length%2)
 }
 
 console.log(findTheOddInt([7]));
