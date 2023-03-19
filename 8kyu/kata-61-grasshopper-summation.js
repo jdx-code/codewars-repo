@@ -7,11 +7,16 @@
 
 const grasshopperSummation = (num) => {
     // Method #1 : Solution by me
-    let sum = 0;
-    for(let i=1; i<=num; i++){
-        sum += i;
-    }
-    return sum;
+    // let sum = 0;
+    // for(let i=1; i<=num; i++){
+    //     sum += i;
+    // }
+    // return sum;
+
+    // Method #2 : Solution found on Codewars
+
+    return Array(num).fill(true)
+    .reduce((sum, item, index) => sum + index + 1, 0)
 }
 
 console.log(grasshopperSummation(2));
