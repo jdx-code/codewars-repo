@@ -10,7 +10,19 @@
 
 const findTheOddInt = (arr) => {
     // Method #1 : Solution found on Codewars
-    return arr.reduce((a,b) => a ^ b);
+    // return arr.reduce((a,b) => a ^ b);
+
+    // Method #2 : Solution found on Codewars
+    let obj = {};
+    arr.forEach(element => {
+        obj[element] ? obj[element]++ : obj[element] = 1;
+    });
+
+    // console.log(obj);
+
+    for(prop in obj){
+        if(obj[prop] % 2 !== 0) return Number(prop);
+    }
 }
 
 console.log(findTheOddInt([7]));
