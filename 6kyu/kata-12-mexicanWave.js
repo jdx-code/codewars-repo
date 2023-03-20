@@ -14,7 +14,18 @@
 const mexicanWave = (str) => {    
 
     // Method #1 : Solution found on Codewars
-    return [...str].map((e, i) => str.slice(0,i) + e.toUpperCase() + str.slice(i+1)).filter(e=>e!=str);
+    // return [...str].map((e, i) => str.slice(0,i) + e.toUpperCase() + str.slice(i+1)).filter(e=>e!=str);
+
+    // Method #2 : Solution found on Codewars
+    let result = [];
+    
+    str.split("").forEach((char, index) => {
+        if (/[a-z]/.test(char)) {
+            result.push(str.slice(0, index) + char.toUpperCase() + str.slice(index + 1));
+        }
+    });
+    
+    return result;
 }
 console.log(mexicanWave("hello"));
 console.log(mexicanWave("hello world"));
