@@ -13,7 +13,7 @@
 
 // Method #1 : Solution found on Codewars
 function totalPoints(games) {
-    var sum=0;
+    let sum=0;
     for (let i=0; i<games.length; ++i)
     {
       if (games[i][0]>games[i][2])
