@@ -8,9 +8,14 @@
 // The elements in the returned array should be in the same order as in the initial array passed to your function, albeit with the 'geese' removed. Note that all of the strings will be in the same case as those provided, and some elements may be repeated.
 
 const filterOutGeese = (arr) => {
-    // Method #1 : Solution by me
+    // Method #1 : Solution by me (using filter and includes())
+    // let arrWithGeese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+    // return arr.filter(e => !arrWithGeese.includes(e));
+
+    // Method #2 : Solution on Codewars (using filter and indexOf())
     let arrWithGeese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-    return arr.filter(e => !arrWithGeese.includes(e));
+    return arr.filter(e => arrWithGeese.indexOf(e) < 0);
+
 }
 
 console.log(filterOutGeese(["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"]))
