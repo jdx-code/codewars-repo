@@ -8,3 +8,25 @@
 // "Indivisibilities" -> 2 # 'i' occurs seven times and 's' occurs twice
 // "aA11" -> 2 # 'a' and '1'
 // "ABBA" -> 2 # 'A' and 'B' each occur twice
+
+
+const countingDuplicates = (str) => {
+    // Method #1 : Solution by me
+    let strCase = str.toLowerCase();
+    let doubleArr = [...strCase].sort().filter((e, i, strCase) => strCase.indexOf(e) !== strCase.lastIndexOf(e));  
+    let newArr = [];
+    for(item of doubleArr){
+        if(!newArr.includes(item)){
+            newArr.push(item);
+        }
+    }
+    return newArr.length;    
+}
+
+console.log(countingDuplicates("abcde"));
+console.log(countingDuplicates("aabbcde"));
+console.log(countingDuplicates("aabBcde"));
+console.log(countingDuplicates("indivisibility"));
+console.log(countingDuplicates("Indivisibilities"));
+console.log(countingDuplicates("aAll"));
+console.log(countingDuplicates("ABBA"));
