@@ -11,13 +11,24 @@
 
 
 const countingDuplicates = (str) => {
+    
     // Method #1 : Solution by me
-    let strCase = str.toLowerCase();
-    let doubleArr = [...strCase].sort().filter((e, i, strCase) => strCase.indexOf(e) !== strCase.lastIndexOf(e));  
+
+    // let strCase = str.toLowerCase();
+    // let doubleArr = [...strCase].sort().filter((e, i, strCase) => strCase.indexOf(e) !== strCase.lastIndexOf(e));  
+    // let newArr = [];
+    // for(item of doubleArr){
+    //     if(!newArr.includes(item)){
+    //         newArr.push(item);
+    //     }
+    // }
+    // return newArr.length; 
+
+    let strCase = str.toLowerCase().split('').sort();
     let newArr = [];
-    for(item of doubleArr){
-        if(!newArr.includes(item)){
-            newArr.push(item);
+    for(let i=0; i<strCase.length; i++){
+        if(strCase[i] === strCase[i+1] && !newArr.includes(strCase[i])){
+            newArr.push(strCase[i]);
         }
     }
     return newArr.length;    
