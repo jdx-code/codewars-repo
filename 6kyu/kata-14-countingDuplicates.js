@@ -24,6 +24,7 @@ const countingDuplicates = (str) => {
     // }
     // return newArr.length; 
 
+    // Method #2 : Solution found on Codewars
     let strCase = str.toLowerCase().split('').sort();
     let newArr = [];
     for(let i=0; i<strCase.length; i++){
