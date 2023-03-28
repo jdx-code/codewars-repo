@@ -35,6 +35,8 @@ const dirReduc = (arr) => {
         "SOUTH" : "NORTH",
         "WEST" : "EAST"
     }
+
+    // Method #1 : Solution found on Codewars
     return arr.reduce((acc, cur)=>{
         if(acc[acc.length-1] === oppWay[cur]){
             acc.pop();
