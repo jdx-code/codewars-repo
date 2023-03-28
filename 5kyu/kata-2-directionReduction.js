@@ -37,12 +37,18 @@ const dirReduc = (arr) => {
     }
 
     // Method #1 : Solution found on Codewars
-    return arr.reduce((acc, cur)=>{
-        if(acc[acc.length-1] === oppWay[cur]){
-            acc.pop();
-        } else {
-            acc.push(cur);
-        }
+    // return arr.reduce((acc, cur)=>{
+    //     if(acc[acc.length-1] === oppWay[cur]){
+    //         acc.pop();
+    //     } else {
+    //         acc.push(cur);
+    //     }
+    //     return acc;
+    // }, []);
+
+    // Method #2 : Solution found on Codewars
+    return arr.reduce((acc, cur) => {
+        oppWay[acc.slice(-1)] === cur ? acc.pop() : acc.push(cur);
         return acc;
     }, []);
 }
