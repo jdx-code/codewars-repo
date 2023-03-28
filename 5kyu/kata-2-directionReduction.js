@@ -29,8 +29,23 @@
 //     if you want to translate, please ask before translating.
 
 const dirReduc = (arr) => {
-    return arr;
+    let oppWay = {
+        "NORTH" : "SOUTH",
+        "EAST" : "WEST",
+        "SOUTH" : "NORTH",
+        "WEST" : "EAST"
+    }
+    return arr.reduce((acc, cur)=>{
+        if(acc[acc.length-1] === oppWay[cur]){
+            acc.pop();
+        } else {
+            acc.push(cur);
+        }
+        return acc;
+    }, []);
 }
 
 console.log(dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]));
-
+console.log(dirReduc(["NORTH", "SOUTH", "EAST", "WEST"]));
+console.log(dirReduc(["NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST"]));
+console.log(dirReduc(["NORTH", "WEST", "SOUTH", "EAST"]));
