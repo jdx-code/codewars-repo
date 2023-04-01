@@ -9,13 +9,15 @@
 // Try to do it without using if statements!
 
 const arithmeticFunc = (a, b, op) => {
+    // Method #1 : My Solution
     const operator = {
-        '+' : 'add',
-        '-' : 'subtract',
-        '*' : 'multiply',
-        '/' : 'divide'
+        'add' : a + b,
+        'subtract' : a - b,
+        'multiply' : a * b,
+        'divide' : a / b
     };
-    return operator;
+
+    return operator[op];    
 }
 
 console.log(arithmeticFunc(5, 2, "add"));
