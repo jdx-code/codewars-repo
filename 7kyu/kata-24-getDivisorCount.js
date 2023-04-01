@@ -1,4 +1,3 @@
-// Kata # 24 of 7kyu
 // Count the number of divisors of a positive integer n.
 // Random tests go up to n = 500000.
 // Examples (input --> output)

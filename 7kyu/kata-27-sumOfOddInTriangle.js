@@ -1,4 +1,3 @@
-// Kata # 27 of 7kyu
 // Given the triangle of consecutive odd numbers:
 
 //              1

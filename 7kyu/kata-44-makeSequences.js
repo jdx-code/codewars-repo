@@ -1,4 +1,3 @@
-// Kata # 44 of 7kyu
 // You are given a positive integer n. We intend to make some ascending sequences according to the following rules:
 //     Make a sequence of length 1: [ n ]
 //     Or, insert a number to the left side of the sequence. But this number can not exceed half of the first number of the sequence.

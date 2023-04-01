@@ -1,4 +1,3 @@
-// Kata # 31 of 7kyu
 // Given a 2D ( nested ) list ( array, vector, .. ) of size m * n, your task is to find the sum of the minimum values in each row.
 // For Example:
 // [ [ 1, 2, 3, 4, 5 ]        #  minimum value of row is 1

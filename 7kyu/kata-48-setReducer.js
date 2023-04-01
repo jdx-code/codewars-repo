@@ -1,4 +1,3 @@
-// Kata # 48 of 7kyu
 // Intro
 // These arrays are too long! Let's reduce them!
 // Description
