@@ -1,4 +1,3 @@
-// Kata # 6 of 6kyu
 // Write Number in Expanded Form
 // You will be given a number and you will need to return it as a string in Expanded Form. For example:
 // expandedForm(12); // Should return '10 + 2'
