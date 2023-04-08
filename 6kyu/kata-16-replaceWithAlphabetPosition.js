@@ -60,7 +60,7 @@ const replaceWithAlphabetPosition = (str) => {
 
     return strInLowerCase.split('').filter(s=>{
         let index = alphabets.indexOf(s);
-        return index > -1;                  // means only those which exists
+        return index > -1;                          // means only those which exists
     }).map(s=>alphabets.indexOf(s)+1).join(' ');
 }
 
