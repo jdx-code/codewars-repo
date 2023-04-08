@@ -22,8 +22,7 @@ const fixStr = (str) => {
         return str.toLowerCase();
     } else if(upperCaseArr.length > lowerCaseArr.length){
         return str.toUpperCase();
-    }
-    
+    }    
 }
 
 console.log(fixStr("coDe"));
