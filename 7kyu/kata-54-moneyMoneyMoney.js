@@ -15,3 +15,16 @@
 // Thus Mr. Scrooge has to wait for 3 years for the initial principal to amount to the desired sum.
 // Your task is to complete the method provided and return the number of years 'Y' as a whole in order for Mr. Scrooge to get the desired sum.
 // Assumption: Assume that Desired Principal 'D' is always greater than the initial principal. However it is best to take into consideration that if Desired Principal 'D' is equal to Principal 'P' this should return 0 Years.
+
+const findYears = (P, I, T, D) => {
+    // Method #1 : Solution from Codewars
+    let years = 0;
+    
+    while(P < D){
+        P += (P * I) * (1 - T);
+        years++;        
+    }
+    return years;
+}
+
+console.log(findYears(1000.00, 0.05, 0.18, 1100.00));
