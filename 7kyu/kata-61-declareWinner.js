@@ -21,16 +21,16 @@ function Fighter(name, health, damagePerAttack) {
 
 const declareWinner = (fighter1, fighter2, firstAttacker) => {
 
-    let numberOfHitsTakenByFighter1 = Math.ceil(fighter2.health / fighter1.damagePerAttack);  //    Ex: 5/2 = 2.5 = 3
-    let numberOfHitsTakenByFighter2 = Math.ceil(fighter1.health / fighter2.damagePerAttack);  //    Ex: 10/4 = 2.5 = 3     
+    let numberOfHitsTakenByFighter1 = Math.ceil(fighter2.health / fighter1.damagePerAttack);  //    Ex: 5/2 = 2.5 = 3   Ex: 5/2 = 2.5 = 3
+    let numberOfHitsTakenByFighter2 = Math.ceil(fighter1.health / fighter2.damagePerAttack);  //    Ex: 10/4 = 2.5 = 3  Ex: 20/3 = 6.6 = 7  
     
     if(numberOfHitsTakenByFighter1 < numberOfHitsTakenByFighter2){
-        return fighter2.name + ' from if';
+        return fighter1.name + ' from if';
     } else if(numberOfHitsTakenByFighter2 < numberOfHitsTakenByFighter1){
-        return fighter1.name + ' from else if';
+        return fighter2.name + ' from else if';
     } else {
         return firstAttacker + ' from else';
     }
 }
 
-console.log(declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew"));       // should say 'Lew wins'
+console.log(declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew"));     // should say 'Lew wins'
