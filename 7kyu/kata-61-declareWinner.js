@@ -16,18 +16,20 @@ function Fighter(name, health, damagePerAttack) {
         this.name = name;
         this.health = health;
         this.damagePerAttack = damagePerAttack;
-        this.toString = function() { return this.name; }
+        this.toString = function() { return this.name; }    // converts names to strings, checks edge cases like jd123 and converts them to string
 }
 
 const declareWinner = (fighter1, fighter2, firstAttacker) => {
-    let fac1 = Math.ceil(fighter1.health / fighter2.damagePerAttack);
-    let fac2 = Math.ceil(fighter2.health / fighter1.damagePerAttack);
-    if(fac1 < fac2){
-        return fighter2.name;
-    } else if(fac2 < fac1){
-        return fighter1.name;
+
+    let numberOfHitsTakenByFighter1 = Math.ceil(fighter2.health / fighter1.damagePerAttack);  //    Ex: 5/2 = 2.5 = 3
+    let numberOfHitsTakenByFighter2 = Math.ceil(fighter1.health / fighter2.damagePerAttack);  //    Ex: 10/4 = 2.5 = 3     
+    
+    if(numberOfHitsTakenByFighter1 < numberOfHitsTakenByFighter2){
+        return fighter2.name + ' from if';
+    } else if(numberOfHitsTakenByFighter2 < numberOfHitsTakenByFighter1){
+        return fighter1.name + ' from else if';
     } else {
-        return firstAttacker;
+        return firstAttacker + ' from else';
     }
 }
 
