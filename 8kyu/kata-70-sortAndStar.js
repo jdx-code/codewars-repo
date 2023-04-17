@@ -3,6 +3,10 @@
 // You should not remove or add elements from/to the array.
 
 const sortAndStar = (str) => {
+
+    // Solution from Codewars
+    return str.sort()[0].split('').join('***');
+
     // Method #1 : Solved by me
     // return str.sort()[0].split('').map((e, i, str) => {
     //     if(i<str.length-1){
@@ -13,17 +17,17 @@ const sortAndStar = (str) => {
     // }).join('');
 
     // Method #2 : Solved by me
-    const firstValueArr = str.sort()[0].split('');
-    const newArr = [];
-    for(let i=0; i<firstValueArr.length; i++){        
-        if(i<firstValueArr.length-1){
-            newArr.push(firstValueArr[i]+'***');
-        }else{
-            newArr.push(firstValueArr[i]);
-        }
+    // const firstValueArr = str.sort()[0].split('');
+    // const newArr = [];
+    // for(let i=0; i<firstValueArr.length; i++){        
+    //     if(i<firstValueArr.length-1){
+    //         newArr.push(firstValueArr[i]+'***');
+    //     }else{
+    //         newArr.push(firstValueArr[i]);
+    //     }
         
-    }
-    return newArr.join('');
+    // }
+    // return newArr.join('');
 }
 
 console.log(sortAndStar(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]));  // should return b***i***t***c***o***i***n
