@@ -5,12 +5,16 @@
 // "Hi There." --> "There. Hi"
 
 const reverseWord = (str) => {
-    let words = str.split(' ');
-    let revStr = [];
-    for(let i=words.length; i>=0; i--){
-        revStr.push(words[i]);
-    }
-    return revStr.join(' ');
+    // Method #1: My Solution
+    // let words = str.split(' ');
+    // let revStr = [];
+    // for(let i=words.length-1; i>=0; i--){
+    //     revStr.push(words[i]);
+    // }
+    // return revStr.join(' ');
+
+    // Method #2: Solution on Codewars
+    return str.split(' ').reverse().join(' ');
 }
 
 console.log(reverseWord("Hello World"));
