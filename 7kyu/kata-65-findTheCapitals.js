@@ -14,7 +14,7 @@ const findtheCaps = (str) => {
         // Method #2 
         // The ASCII value of the lowercase alphabet is from 97 to 122. 
         // The ASCII value of the uppercase alphabet is from 65 to 90.
-        if(splitStr[i].charCodeAt() < 90){
+        if(splitStr[i].charCodeAt() <= 90){
             indexArr.push(i)
         }
     }
