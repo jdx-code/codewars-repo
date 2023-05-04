@@ -6,7 +6,32 @@
 // budget, people => (300, 9) will return 3 and so on.
 
 const findingCaterer = (budget, people) => {
-        
+    
+    // if there are no people or the budget is lower than the cost of buffets from the first caterer.
+    if(people < 1 || budget < 15){
+        return -1
+    }
+
+    let basicBuffet = 15 * people
+    let economyBuffet = 20 * people
+    let premiumBuffet = 30 * people
+
+    if(people > 60){
+        let discount = premiumBuffet * 0.2
+        let premiumBuffetAfterDiscount = premiumBuffet - discount
+        premiumBuffet = premiumBuffetAfterDiscount
+    }
+
+    let catererArray = [basicBuffet, economyBuffet, premiumBuffet]
+     
+    let catererWithinBudget = catererArray.filter(c => c <= budget)
+
+    if(catererWithinBudget.length < 1){
+        return -1
+    }
+
+    return catererArray.indexOf(Math.max(...catererWithinBudget)) + 1;
+    
 }
 
 console.log(findingCaterer(150, 10))
