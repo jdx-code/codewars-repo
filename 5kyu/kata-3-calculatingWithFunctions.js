@@ -11,71 +11,44 @@
 //     Division should be integer division. For example, this should return 2, not 2.666666...:
 // eight(dividedBy(three()));
 
-function zero(fn) {
-    return fn ? fn(0) : 0;
+
+
+function five(callback) {
+    if(callback){
+        return callback(5)
+    }
+    return 5;
 }
 
-function one(fn) {
-    return fn ? fn(1) : 1;
+function seven(callback) {
+    if(callback){
+        return function(7){
+            return 7 * 5;        
+        }
+    }
+    return 7;
 }
 
-function two(fn) {
-    return fn ? fn(2) : 2;
-}
-
-function three(fn) {
-    return fn ? fn(3) : 3;
-}
-
-function four(fn) {
-    return fn ? fn(4) : 4;
-}
-
-function five(fn) {
-    return fn ? fn(5) : 5;
-}
-
-function six(fn) {
-    return fn ? fn(6) : 6;
-}
-
-function seven(fn) {
-    return fn ? fn(7) : 7;
-}
-
-function eight(fn) {
-    return fn ? fn(8) : 8;
-}
-
-function nine(fn) {
-    return fn ? fn(9) : 9;
-}
-
-function plus(n) {
+function times(5) {
     return function(v){
-        return v + n;
+        return v * 5;        
     }
 }
-
-function minus(n) {
-    return function(v){
-        return v - n;
-    }
+const timesByFive = function(v) {
+    return v * 5;
 }
+const timesByFive = times(5)
+const sevenTimesFive = timesByFive(7)
 
-function times(n) {
-    return function(v){
-        return v * n;        
-    }
+const myNumber = five() * seven()
+const addTwoValues = (a, b) => {
+    return a + b;
 }
-
-function dividedBy(n) {
-    return function(v){
-        return Math.floor(v / n);
-    }
-}
+addTwoValues(myNumber, five());
+console.log(five(seven()))
 
 console.log(seven(times(five())));
-console.log(four(plus(nine())));
-console.log(eight(minus(three())));
-console.log(six(dividedBy(two())));
+
+// console.log(four(plus(nine())));
+// console.log(eight(minus(three())));
+// console.log(six(dividedBy(two())));
